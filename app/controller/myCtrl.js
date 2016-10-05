@@ -34,6 +34,7 @@ $scope.sshow=true;
 }}
 
 };
+	<!---------------------directive------------------>
 		app.directive('myfd',function(){
 		return{
 			templateUrl:"template/new.html",
