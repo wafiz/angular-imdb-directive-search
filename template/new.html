@@ -1,0 +1,33 @@
+<div ng-controller="myCtrl">
+			<input ng-model="searchName" placeholder="search actors ....." ng-change="getActors()">
+			<input ng-model="searchM" placeholder="search movies ....." ng-change="getMovies()">
+<button ng-click="sshow" >RESET</button>
+			<br><hr><br>
+			<div ng-show="!sshow" >
+			
+			<div ng-repeat="r in results" class="ds" ng-click="getMoviesById(r.id)">
+				id:{{r.id}}
+				name:{{r.name}}
+				<img ng-src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{r.profile_path}}"/>
+			</div></div>
+			
+		
+			<div ng-show="sshow">
+			
+				<div ng-repeat="c in cast" class="ds">
+					
+					<div class="cetner-text">
+						{{c.original_title}}
+					</div>
+					<img ng-src="https://image.tmdb.org/t/p/w500/{{c.poster_path}}" >
+				</div>	</div>	
+						
+					<div ng-repeat="r in results1" class="ds">
+				name:{{r.original_title}}
+				<img src="https://image.tmdb.org/t/p/w500/{{r.poster_path}}"/>
+			</div>
+		
+				
+				
+			</div>
+		</div>
